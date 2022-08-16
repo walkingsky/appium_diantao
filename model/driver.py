@@ -5,7 +5,7 @@ __author__ = "walkingsky"
 
 import time
 
-DEBUG_FLG = True
+DEBUG_FLG = False
 
 
 def str_to_secends(str):
@@ -41,8 +41,7 @@ def find_element(driver, element, retry=3, debug=DEBUG_FLG):
         retry = retry - 1
         try:
             finded_element = driver.find_element(method, xpath)
-            if debug == True:
-                print("成功定位到元素：" + element["text"])
+            print("成功定位到元素：" + element["text"])
             return finded_element
         except Exception as e:
             if debug == True:
@@ -75,8 +74,7 @@ def get_element_attr(driver, element, attribute: str, retry=3, debug=DEBUG_FLG):
             find_element = driver.find_element(
                 method, xpath)
             find_str = find_element.get_attribute(attribute)
-            if debug == True:
-                print("获取到的元素属性值为：" + find_str)
+            print("获取到的元素属性值为：" + find_str)
             return find_str
         except Exception as e:
             if debug == True:
@@ -122,8 +120,7 @@ def click_element(driver, element,  retry=3, debug=DEBUG_FLG):
         retry = retry - 1
         try:
             driver.find_element(method, xpath).click()
-            if debug == True:
-                print("成功点击元素：" + element["text"])
+            print("成功点击元素：" + element["text"])
             return True
         except Exception as e:
             if debug == True:

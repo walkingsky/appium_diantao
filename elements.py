@@ -102,7 +102,7 @@ meizu_elements = {
         # 视频播放任务提示
         "task tips": {"text": "视频播放任务提示", "method": "id", "des": "com.taobao.live:id/task_center_action"},
         #
-        "task process": {"text": "元宝进度", "method": "xpath", "des": "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout[2]/android.widget.RelativeLayout[2]/android.widget.RelativeLayout/android.widget.TextView"}
+        "task process": {"text": "元宝进度", "method": "id", "des": "com.taobao.live:id/gold_turns_text"}
     },
     # 签到页面
     "sign in": {
